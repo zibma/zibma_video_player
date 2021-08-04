@@ -16,8 +16,8 @@ class _CustomIconsExamplePageState extends State<CustomIconsExamplePage> {
   // to enable the pip (picture in picture) support on Android
   final _meeduPlayerController = MeeduPlayerController(
     controlsStyle: ControlsStyle.primary,
-    pipEnabled: true, // enable  pip on android
-    showPipButton: true, // use false to hide pip button in the player
+    pipEnabled: false, // enable  pip on android
+    showPipButton: false, // use false to hide pip button in the player
   );
 
   StreamSubscription? _playerEventSubs;
@@ -54,7 +54,7 @@ class _CustomIconsExamplePageState extends State<CustomIconsExamplePage> {
     _meeduPlayerController.setDataSource(
       DataSource(
         type: DataSourceType.network,
-        source: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4",
+        source: "https://movietrailers.apple.com/movies/independent/bill-ted-face-the-music/bill-and-ted-face-the-music-trailer-1_h720p.mov",
       ),
       autoplay: true,
     );
@@ -145,6 +145,7 @@ class _CustomIconsExamplePageState extends State<CustomIconsExamplePage> {
                     color: Colors.redAccent,
                   ),
                 ),
+
               );
             },
           ),
