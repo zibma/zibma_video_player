@@ -1,4 +1,4 @@
-name: zibma_video_player
+name: player_example
 description: Demonstrates how to use the player plugin.
 
 # The following line prevents the package from being accidentally published to
