@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/rx.dart';
-import 'package:zibma_video_player/src/controller.dart';
+import 'package:meedu_player/src/controller.dart';
 
 class ControlsContainer extends StatelessWidget {
   final Widget child;

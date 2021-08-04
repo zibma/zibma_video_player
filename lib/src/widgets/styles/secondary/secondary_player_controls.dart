@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:zibma_video_player/src/controller.dart';
-import 'package:zibma_video_player/src/helpers/responsive.dart';
+import 'package:meedu_player/src/controller.dart';
+import 'package:meedu_player/src/helpers/responsive.dart';
 
-import 'package:zibma_video_player/src/widgets/styles/controls_container.dart';
-import 'package:zibma_video_player/src/widgets/styles/secondary/secondary_bottom_controls.dart';
+import 'package:meedu_player/src/widgets/styles/controls_container.dart';
+import 'package:meedu_player/src/widgets/styles/secondary/secondary_bottom_controls.dart';
 
 class SecondaryVideoPlayerControls extends StatelessWidget {
   final Responsive responsive;

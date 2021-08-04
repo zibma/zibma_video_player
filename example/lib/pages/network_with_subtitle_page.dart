@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zibma_video_player/meedu_player.dart';
+import 'package:meedu_player/meedu_player.dart';
 
 class NetworkWithSubtitlesPage extends StatefulWidget {
   @override

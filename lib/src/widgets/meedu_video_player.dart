@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/rx.dart';
-import 'package:zibma_video_player/meedu_player.dart';
-import 'package:zibma_video_player/src/controller.dart';
-import 'package:zibma_video_player/src/helpers/responsive.dart';
-import 'package:zibma_video_player/src/widgets/closed_caption_view.dart';
-import 'package:zibma_video_player/src/widgets/styles/primary/primary_player_controls.dart';
-import 'package:zibma_video_player/src/widgets/styles/secondary/secondary_player_controls.dart';
+import 'package:meedu_player/meedu_player.dart';
+import 'package:meedu_player/src/controller.dart';
+import 'package:meedu_player/src/helpers/responsive.dart';
+import 'package:meedu_player/src/widgets/closed_caption_view.dart';
+import 'package:meedu_player/src/widgets/styles/primary/primary_player_controls.dart';
+import 'package:meedu_player/src/widgets/styles/secondary/secondary_player_controls.dart';
 import 'package:video_player/video_player.dart';
 
 class MeeduVideoPlayer extends StatefulWidget {

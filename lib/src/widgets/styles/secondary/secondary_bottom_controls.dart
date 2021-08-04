@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/rx.dart';
-import 'package:zibma_video_player/meedu_player.dart';
-import 'package:zibma_video_player/src/helpers/responsive.dart';
-import 'package:zibma_video_player/src/helpers/utils.dart';
-import 'package:zibma_video_player/src/widgets/fullscreen_button.dart';
-import 'package:zibma_video_player/src/widgets/mute_sound_button.dart';
-import 'package:zibma_video_player/src/widgets/pip_button.dart';
-import 'package:zibma_video_player/src/widgets/play_pause_button.dart';
-import 'package:zibma_video_player/src/widgets/player_slider.dart';
+import 'package:meedu_player/meedu_player.dart';
+import 'package:meedu_player/src/helpers/responsive.dart';
+import 'package:meedu_player/src/helpers/utils.dart';
+import 'package:meedu_player/src/widgets/fullscreen_button.dart';
+import 'package:meedu_player/src/widgets/mute_sound_button.dart';
+import 'package:meedu_player/src/widgets/pip_button.dart';
+import 'package:meedu_player/src/widgets/play_pause_button.dart';
+import 'package:meedu_player/src/widgets/player_slider.dart';
 
 import '../../video_fit_button.dart';
 

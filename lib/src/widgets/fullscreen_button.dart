@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/rx.dart';
-import 'package:zibma_video_player/meedu_player.dart';
+import 'package:meedu_player/meedu_player.dart';
 
 import 'player_button.dart';
 
