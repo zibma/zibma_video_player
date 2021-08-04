@@ -71,20 +71,7 @@ class SecondaryBottomControls extends StatelessWidget {
                       );
                     },
                   ),
-                  // PlayerButton(
-                  //   onPressed: _.rewind,
-                  //   size: buttonsSize,
-                  //   iconColor: Colors.white,
-                  //   backgrounColor: Colors.transparent,
-                  //   iconPath: 'assets/icons/rewind.png',
-                  // ),
-                  // PlayerButton(
-                  //   onPressed: _.fastForward,
-                  //   iconColor: Colors.white,
-                  //   backgrounColor: Colors.transparent,
-                  //   size: buttonsSize,
-                  //   iconPath: 'assets/icons/fast-forward.png',
-                  // ),
+
                   SizedBox(width: 5),
                 ],
               ),
