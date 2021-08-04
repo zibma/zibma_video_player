@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/rx.dart';
-import 'package:meedu_player/meedu_player.dart';
-import 'package:meedu_player/src/helpers/utils.dart';
+import 'package:zibma_video_player/meedu_player.dart';
+import 'package:zibma_video_player/src/helpers/utils.dart';
 
 class PlayerSlider extends StatelessWidget {
   const PlayerSlider({Key? key}) : super(key: key);

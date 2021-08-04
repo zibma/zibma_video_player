@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meedu_player/meedu_player.dart';
+import 'package:zibma_video_player/meedu_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class ListViewExample extends StatefulWidget {

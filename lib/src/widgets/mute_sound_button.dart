@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/rx.dart';
-import 'package:meedu_player/meedu_player.dart';
-import 'package:meedu_player/src/helpers/responsive.dart';
+import 'package:zibma_video_player/meedu_player.dart';
+import 'package:zibma_video_player/src/helpers/responsive.dart';
 
 import 'player_button.dart';
 

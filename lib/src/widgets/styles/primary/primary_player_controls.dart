@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:meedu_player/meedu_player.dart';
+import 'package:zibma_video_player/meedu_player.dart';
 
-import 'package:meedu_player/src/helpers/responsive.dart';
-import 'package:meedu_player/src/widgets/play_pause_button.dart';
-import 'package:meedu_player/src/widgets/styles/controls_container.dart';
-import 'package:meedu_player/src/widgets/styles/primary/bottom_controls.dart';
+import 'package:zibma_video_player/src/helpers/responsive.dart';
+import 'package:zibma_video_player/src/widgets/play_pause_button.dart';
+import 'package:zibma_video_player/src/widgets/styles/controls_container.dart';
+import 'package:zibma_video_player/src/widgets/styles/primary/bottom_controls.dart';
 import '../../player_button.dart';
 
 class PrimaryVideoPlayerControls extends StatelessWidget {
