@@ -60,11 +60,9 @@ class PlayerSlider extends StatelessWidget {
                   activeTrackColor: Colors.red[700],
                   inactiveTrackColor: Colors.red[100],
                   trackShape: RectangularSliderTrackShape(),
-                  trackHeight: 4.0,
+                  trackHeight: 2.0,
                   thumbColor: Colors.redAccent,
-                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.0),
-                  overlayColor: Colors.red.withAlpha(32),
-                  overlayShape: RoundSliderOverlayShape(overlayRadius: 28.0),
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 7.0),
                 ),
                 child: Slider(
                   min: 0,
