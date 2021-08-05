@@ -123,9 +123,7 @@ class _ChangeQualityExamplePageState extends State<ChangeQualityExamplePage> {
         child: MeeduVideoPlayer(
           controller: _controller,
           bottomRight: (ctx, controller, responsive) {
-            // creates a responsive fontSize using the size of video container
-            final double fontSize = responsive.ip(3);
-
+             final double fontSize = responsive.ip(3);
             return CupertinoButton(
               padding: EdgeInsets.all(5),
               minSize: 25,
