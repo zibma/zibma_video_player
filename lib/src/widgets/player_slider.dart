@@ -50,7 +50,7 @@ class PlayerSlider extends StatelessWidget {
               alignment: Alignment.center,
               child: SliderTheme(
                 data: SliderThemeData(
-                  trackShape: MSliderTrackShape(),
+                  // trackShape: MSliderTrackShape(),
                   thumbColor: _.colorTheme,
                   activeTrackColor: _.colorTheme,
                   trackHeight: 10,
