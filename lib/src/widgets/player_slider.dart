@@ -66,7 +66,7 @@ class PlayerSlider extends StatelessWidget {
                 ),
                 child: Slider(
                   min: 0,
-                  divisions: _.duration.value.inSeconds,
+                  // divisions: _.duration.value.inSeconds,
                   value: value.toDouble(),
                   onChangeStart: (v) {
                     _.onChangedSliderStart();
