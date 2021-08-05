@@ -166,7 +166,7 @@ class MeeduPlayerController {
     _errorText = errorText;
     this.tag = DateTime.now().microsecondsSinceEpoch.toString();
     this.loadingWidget = loadingWidget ??
-        SpinKitWave(
+        SpinKitFadingCircle(
           size: 30,
           color: this.colorTheme,
         );
