@@ -49,12 +49,22 @@ class PlayerSlider extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 8),
               alignment: Alignment.center,
               child: SliderTheme(
-                data: SliderThemeData(
-                  trackShape: MSliderTrackShape(),
-                  thumbColor: _.colorTheme,
-                  activeTrackColor: _.colorTheme,
-                  trackHeight: 10,
-                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 4.0),
+                // data: SliderThemeData(
+                //   trackShape: MSliderTrackShape(),
+                //   thumbColor: _.colorTheme,
+                //   activeTrackColor: _.colorTheme,
+                //   trackHeight: 10,
+                //   thumbShape: RoundSliderThumbShape(enabledThumbRadius: 4.0),
+                // ),
+                data: SliderTheme.of(context).copyWith(
+                  activeTrackColor: Colors.red[700],
+                  inactiveTrackColor: Colors.red[100],
+                  trackShape: RectangularSliderTrackShape(),
+                  trackHeight: 4.0,
+                  thumbColor: Colors.redAccent,
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.0),
+                  overlayColor: Colors.red.withAlpha(32),
+                  overlayShape: RoundSliderOverlayShape(overlayRadius: 28.0),
                 ),
                 child: Slider(
                   min: 0,
