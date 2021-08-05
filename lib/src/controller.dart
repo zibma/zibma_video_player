@@ -167,8 +167,9 @@ class MeeduPlayerController {
     this.tag = DateTime.now().microsecondsSinceEpoch.toString();
     this.loadingWidget = loadingWidget ??
         SpinKitFadingCircle(
-          size: 30,
-          color: this.colorTheme,
+          size: 50,
+          // color: this.colorTheme,
+          color: Colors.white,
         );
 
     if (pipEnabled) {
