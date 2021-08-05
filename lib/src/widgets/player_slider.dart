@@ -49,20 +49,12 @@ class PlayerSlider extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 8),
               alignment: Alignment.center,
               child: SliderTheme(
-                // data: SliderThemeData(
-                //   trackShape: MSliderTrackShape(),
-                //   thumbColor: _.colorTheme,
-                //   activeTrackColor: _.colorTheme,
-                //   trackHeight: 10,
-                //   thumbShape: RoundSliderThumbShape(enabledThumbRadius: 4.0),
-                // ),
-                data: SliderTheme.of(context).copyWith(
-                  activeTrackColor: Colors.red[700],
-                  inactiveTrackColor: Colors.red[100],
-                  trackShape: RectangularSliderTrackShape(),
-                  trackHeight: 2.0,
-                  thumbColor: Colors.redAccent,
-                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 7.0),
+                data: SliderThemeData(
+                  trackShape: MSliderTrackShape(),
+                  thumbColor: _.colorTheme,
+                  activeTrackColor: _.colorTheme,
+                  trackHeight: 10,
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 6.0),
                 ),
                 child: Slider(
                   min: 0,
@@ -99,7 +91,7 @@ class MSliderTrackShape extends RoundedRectSliderTrackShape {
     bool isEnabled = false,
     bool isDiscrete = false,
   }) {
-    final double trackHeight = 1;
+    final double trackHeight = 3;
     final double trackLeft = offset.dx;
     final double trackTop =
         offset.dy + (parentBox.size.height - trackHeight) / 2 + 4;
