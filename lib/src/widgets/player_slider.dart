@@ -50,7 +50,7 @@ class PlayerSlider extends StatelessWidget {
               alignment: Alignment.center,
               child: SliderTheme(
                 data: SliderThemeData(
-                  // trackShape: MSliderTrackShape(),
+                  trackShape: MSliderTrackShape(),
                   thumbColor: _.colorTheme,
                   activeTrackColor: _.colorTheme,
                   trackHeight: 10,
@@ -94,7 +94,7 @@ class MSliderTrackShape extends RoundedRectSliderTrackShape {
     final double trackHeight = 1;
     final double trackLeft = offset.dx;
     final double trackTop =
-        offset.dy + (parentBox.size.height - trackHeight) / 2 + 4;
+        offset.dy + (parentBox.size.height - trackHeight)  ;
     final double trackWidth = parentBox.size.width;
     return Rect.fromLTWH(trackLeft, trackTop, trackWidth, trackHeight);
   }
