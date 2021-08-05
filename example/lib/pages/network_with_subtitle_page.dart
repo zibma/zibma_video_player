@@ -31,7 +31,7 @@ class _NetworkWithSubtitlesPageState extends State<NetworkWithSubtitlesPage> {
     await _controller.setDataSource(
       DataSource(
         source:
-            "https://video-downloads.googleusercontent.com/AGQNM9L-rwONoN1oNi0SMMENawziHfv4lJIs2oKuMutSzlfl8rV2RjckG-iad-4mCDQe2ROIguzs2ZdQYTmH5RSjs6PVaVP_xTmnRIUy4cjNZ95xAQZwNqxiC-Y9xRtMIbfxGs9vdi_wKu9Tg9E3vv8aU4IPncAmfrofDyJF8Od4bAKzq-27Bxb_Wa7gK3My0B4gVME1jeN7KhIZfC62s1SzfhuTxFI2BXIgvdrxssbyqY2SMEnSCjE",
+            "https://movietrailers.apple.com/movies/independent/bill-ted-face-the-music/bill-and-ted-face-the-music-trailer-1_h720p.mov",
         type: DataSourceType.network,
       ),
       autoplay: true,

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meedu_player/meedu_player.dart';
 import 'package:wakelock/wakelock.dart';
@@ -12,20 +13,17 @@ class CustomIconsExamplePage extends StatefulWidget {
 }
 
 class _CustomIconsExamplePageState extends State<CustomIconsExamplePage> {
-  // read the documentation https://the-meedu-app.github.io/flutter-meedu-player/#/picture-in-picture
-  // to enable the pip (picture in picture) support on Android
   final _meeduPlayerController = MeeduPlayerController(
-    controlsStyle: ControlsStyle.primary,
-    pipEnabled: false, // enable  pip on android
-    showPipButton: false, // use false to hide pip button in the player
-  );
+      controlsStyle: ControlsStyle.primary,
+      pipEnabled: false,
+      showPipButton: false,
+      colorTheme: Colors.red);
 
   StreamSubscription? _playerEventSubs;
 
   @override
   void initState() {
     super.initState();
-    // The following line will enable the Android and iOS wakelock.
     _playerEventSubs = _meeduPlayerController.onPlayerStatusChanged.listen(
       (PlayerStatus status) {
         if (status == PlayerStatus.playing) {
@@ -43,7 +41,6 @@ class _CustomIconsExamplePageState extends State<CustomIconsExamplePage> {
 
   @override
   void dispose() {
-    // The next line disables the wakelock again.
     _playerEventSubs?.cancel();
     Wakelock.disable();
     _meeduPlayerController.dispose();
@@ -54,7 +51,8 @@ class _CustomIconsExamplePageState extends State<CustomIconsExamplePage> {
     _meeduPlayerController.setDataSource(
       DataSource(
         type: DataSourceType.network,
-        source: "https://movietrailers.apple.com/movies/independent/bill-ted-face-the-music/bill-and-ted-face-the-music-trailer-1_h720p.mov",
+        source:
+            "https://movietrailers.apple.com/movies/independent/bill-ted-face-the-music/bill-and-ted-face-the-music-trailer-1_h720p.mov",
       ),
       autoplay: true,
     );
@@ -69,85 +67,111 @@ class _CustomIconsExamplePageState extends State<CustomIconsExamplePage> {
           aspectRatio: 16 / 9,
           child: MeeduVideoPlayer(
             controller: _meeduPlayerController,
-            customIcons: (responsive) {
-              final iconSize = responsive.ip(15);
-              final miniIconSize = responsive.ip(7);
-              return CustomIcons(
-                play: Container(
-                  padding: EdgeInsets.all(iconSize * 0.2),
-                  child: Icon(
-                    Icons.play_arrow,
-                    size: iconSize,
-                    color: Colors.redAccent,
+            header: (ctx, controller, responsive) {
+              return Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 20,
+                    backgroundColor: Colors.black12,
+                    child: Container(
+                      height: 40,
+                      width: 40,
+                      child: CupertinoButton(
+                        padding: EdgeInsets.all(5),
+                        child: Icon(
+                          CupertinoIcons.back,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ),
                   ),
                 ),
-                pause: Container(
-                  padding: EdgeInsets.all(iconSize * 0.2),
-                  child: Icon(
-                    Icons.pause,
-                    size: iconSize,
-                    color: Colors.redAccent,
-                  ),
-                ),
-                rewind: Container(
-                  padding: EdgeInsets.all(iconSize * 0.1),
-                  child: Icon(
-                    Icons.fast_rewind_rounded,
-                    size: iconSize * 0.8,
-                    color: Colors.redAccent,
-                  ),
-                ),
-                fastForward: Container(
-                  padding: EdgeInsets.all(iconSize * 0.1),
-                  child: Icon(
-                    Icons.fast_forward_rounded,
-                    size: iconSize * 0.8,
-                    color: Colors.redAccent,
-                  ),
-                ),
-                mute: Container(
-                  padding: EdgeInsets.all(miniIconSize * 0.2),
-                  child: Icon(
-                    Icons.volume_off_rounded,
-                    size: miniIconSize,
-                    color: Colors.redAccent,
-                  ),
-                ),
-                sound: Container(
-                  padding: EdgeInsets.all(miniIconSize * 0.2),
-                  child: Icon(
-                    Icons.volume_up_rounded,
-                    size: miniIconSize,
-                    color: Colors.redAccent,
-                  ),
-                ),
-                fullscreen: Container(
-                  padding: EdgeInsets.all(miniIconSize * 0.2),
-                  child: Icon(
-                    Icons.fullscreen_rounded,
-                    size: miniIconSize,
-                    color: Colors.redAccent,
-                  ),
-                ),
-                minimize: Container(
-                  padding: EdgeInsets.all(miniIconSize * 0.2),
-                  child: Icon(
-                    Icons.fullscreen_exit_rounded,
-                    size: miniIconSize,
-                    color: Colors.redAccent,
-                  ),
-                ),
-                pip: Container(
-                  padding: EdgeInsets.all(miniIconSize * 0.2),
-                  child: Icon(
-                    Icons.picture_in_picture_alt_rounded,
-                    size: miniIconSize * 0.8,
-                    color: Colors.redAccent,
-                  ),
-                ),
-
               );
             },
+            // customIcons: (responsive) {
+            //   final iconSize = responsive.ip(15);
+            //   final miniIconSize = responsive.ip(7);
+            //   return CustomIcons(
+            //     play: Container(
+            //       padding: EdgeInsets.all(iconSize * 0.2),
+            //       child: Icon(
+            //         Icons.play_arrow,
+            //         size: iconSize,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     pause: Container(
+            //       padding: EdgeInsets.all(iconSize * 0.2),
+            //       child: Icon(
+            //         Icons.pause,
+            //         size: iconSize,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     rewind: Container(
+            //       padding: EdgeInsets.all(iconSize * 0.1),
+            //       child: Icon(
+            //         Icons.fast_rewind_rounded,
+            //         size: iconSize * 0.8,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     fastForward: Container(
+            //       padding: EdgeInsets.all(iconSize * 0.1),
+            //       child: Icon(
+            //         Icons.fast_forward_rounded,
+            //         size: iconSize * 0.8,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     mute: Container(
+            //       padding: EdgeInsets.all(miniIconSize * 0.2),
+            //       child: Icon(
+            //         Icons.volume_off_rounded,
+            //         size: miniIconSize,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     sound: Container(
+            //       padding: EdgeInsets.all(miniIconSize * 0.2),
+            //       child: Icon(
+            //         Icons.volume_up_rounded,
+            //         size: miniIconSize,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     fullscreen: Container(
+            //       padding: EdgeInsets.all(miniIconSize * 0.2),
+            //       child: Icon(
+            //         Icons.fullscreen_rounded,
+            //         size: miniIconSize,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     minimize: Container(
+            //       padding: EdgeInsets.all(miniIconSize * 0.2),
+            //       child: Icon(
+            //         Icons.fullscreen_exit_rounded,
+            //         size: miniIconSize,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //     pip: Container(
+            //       padding: EdgeInsets.all(miniIconSize * 0.2),
+            //       child: Icon(
+            //         Icons.picture_in_picture_alt_rounded,
+            //         size: miniIconSize * 0.8,
+            //         color: Colors.redAccent,
+            //       ),
+            //     ),
+            //
+            //   );
+            // },
           ),
         ),
       ),
